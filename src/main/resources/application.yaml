@@ -1,0 +1,14 @@
+spring:
+  web:
+    resources:
+      add-mappings: true
+
+#      cache:
+#        period: 10000
+
+#  mvc:
+#    static-path-pattern: /res/**
+
+    hiddenmethod:
+      filter:
+        enabled: true

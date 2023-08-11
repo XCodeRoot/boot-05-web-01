@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<h1>index.html</h1>
+
+    <a href="/cars/sell;low=34;brand=byd,audi,yd">@MatrixVariable(矩阵变量)  一个key对应多个value</a>
+    <a href="/cars/sell;low=34;brand=byd,brand=audi;brand=yd">@MatrixVariable(矩阵变量) 分开来写也可以</a>
+    <a href="/boos/1;age=10/2;age=20">@MatrixVariable(矩阵变量) /boos/{boosId}/{empId}</a>
+
+
+
+    <ul>
+        <a href="car/3/owner/zhangsan?age=18&inters=basketball&inters=game">car/{id}/owner/{username}</a>
+    </ul>
+    <form action="/save" method="post">
+        用户名:<input name="userName"  >
+        邮箱: <input name="email"  >
+        <input type="submit" value="提交" >
+    </form>
+
+
+
+    <form action="/user" method="get">
+        <input value="REST-GET提交" type="submit" />
+    </form>
+
+    <form action="/user" method="post">
+        <input value="REST-POST提交" type="submit" />
+    </form>
+
+    <form action="/user" method="post">
+        <input name="_method" type="hidden" value="DELETE"/>
+        <input value="REST-DELETE 提交" type="submit"/>
+    </form>
+
+    <form action="/user" method="post">
+        <input name="_method" type="hidden" value="PUT" />
+        <input value="REST-PUT提交"type="submit" />
+    </form>
+</body>
+</html>
